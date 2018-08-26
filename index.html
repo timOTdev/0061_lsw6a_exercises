@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hello World React</title>
+  <style>
+    .heading {
+      color: palevioletred;
+    }
+
+    .SecondHeader {
+      color: palegreen;
+    }
+
+    .Description {
+      color: palegoldenrod;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<script type='text/babel'>
+const SecondHeader = (props) => {
+  return <h2 className="SecondHeader">Aho Mitakuye Oyasin, {props.name}.</h2>
+}
+const Description = (props) => {
+  return <p className="Description">You are all my relations, my relatives, without whom I would not live. We are in the circle of life together, co-existing, co-dependent, co-creating our destiny. One, not more important than the other. One nation evolving from the other and yet each dependent upon the one above and the one below. All of us a part of the Great Mystery.</p>
+}
+const MyButton = (props) => {
+  return <button>Click this button!</button>
+}
+
+  // we'll write our app in between this script tag.
+
+  // Written with React.createElement
+  // const myElement = React.createElement('h1', {className: 'heading'}, 'Hello World!');
+
+  // Written with JSX, compiled by Babel
+  const App = (props) => {
+    return (
+      <div className="heading">
+      <h1>Hello World</h1>
+      <SecondHeader name="world"/>
+      <Description />
+      <MyButton />
+      </div>
+    )
+  }
+  ReactDOM.render(<App />, document.getElementById('app'));
+</script>
+
+</html>
