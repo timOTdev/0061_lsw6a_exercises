@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+ <title>Hello World React</title>
+</head>
+​
+<body>
+ <div id="target"></div>
+</body>
+
+​<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<script type='text/babel'>
+  // React.createElement 
+  // const myElement = React.createElement('h1', {className: 'heading'}, 'Hello world!')
+
+  // JSX = html-like code in javascript
+  // const myElement = <h1 className="heading">Hello World!</h1>
+
+  // Functional Components
+  const BasicComponent = () => <h1 className="heading">Hello World!!</h1>
+
+  const BasicHeader = () => <h1 className="heading">Hello World</h1>
+
+  const BasicButton = () => <button>Click me, I'm a button!</button>
+
+  const BasicInput = () => <input type="text" placeholder="React is the COOLEST THING EVER!!!!" />
+
+  const App = () => (
+    <div>
+      <BasicComponent />
+      <BasicHeader />
+      <BasicButton />
+      <BasicInput />
+    </div>
+  )
+
+  ReactDOM.render(<App />, document.getElementById('target'))
+</script>
+​
+</html>
